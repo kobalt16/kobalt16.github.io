@@ -11,7 +11,7 @@
 
     const numberOfRings = 10;
     const ringRadiusOffset = 3;
-    const ringRadius = 300;
+    const ringRadius = 100;
     const waveOffset = 10;
     const colors = ['#FC0'];
     let startAngle = 0;
