@@ -62,17 +62,17 @@
         <main>
             <section id="home" class="block home scroll-block">
                 
-                    <div class="greeating-container">
+                    <div class="greeating-container wow backInDown">
                         Hi, <br>
                         I'm Ruslan <br>
                         Frontend Developer
                     </div>
 
             </section>
-            <section class="half-section half-one scroll-block">
-                    <div class="container-cube">
+            <section id="trigger1" class="half-section half-one scroll-block">
+                    <div  class="container-cube">
                         <div class="cube">
-                            <div class="side front">r</div>
+                            <div  class="side front">r</div>
                             <div class="side back">u</div>
                             <div class="side right">s</div>
                             <div class="side left">l</div>
@@ -84,7 +84,7 @@
             </section>
             <section class="half-section preclouds-container scroll-block">
                 
-                    <div class="preclouds ">
+                    <div  class="preclouds">
                         <!-- <img src="./assets/cloud01.png" alt=""> -->
                         <p>About me</p> 
                     </div>
@@ -94,7 +94,7 @@
                 
                     <div class="sky">
                         <div class="clouds"></div>
-                        <div class="about-container">
+                        <div id="trigger2" class="about-container">
                             <p>Hello, my name is Ruslan. Thank you for visiting my site.</p>
                     <p>I am studying web development and this site is one of my projects, I hope you appreciate it.</p>
                     <p>Besides programming, I like:</p> 
@@ -117,10 +117,10 @@
             <section id="skills" class="block skills scroll-block">
                 
                     <!-- <div class="canvas-skills"></div> -->
-                    <div class="container-skills">
+                    <div id="trigger3" class="container-skills">
                     
                         
-                        <div class="card">
+                        <div  class="card">
                             <div class="card-item one">
                                 <img class="image-1" src="./assets/skills/html.svg"  alt="">
                             </div>
@@ -221,7 +221,9 @@
 
     </div>
 
-    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="./js/scrollMagic.js"></script>
     <script src="./js/ScrollSpy.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/main.js"></script>

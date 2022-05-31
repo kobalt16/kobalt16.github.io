@@ -315,8 +315,10 @@ header .header-container .menu-list .list-items .activate {
   color: aliceblue;
   -webkit-perspective: 1000px;
           perspective: 1000px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  -webkit-transition: all 3s;
+  transition: all 3s;
 }
 
 .half-one .container-cube .cube {
@@ -345,62 +347,36 @@ header .header-container .menu-list .list-items .activate {
   line-height: 300px;
   -webkit-box-shadow: 1px 1px 55px #b1fd2f;
           box-shadow: 1px 1px 55px #b1fd2f;
-  /* backface-visibility: hidden; */
-  /* border-radius: 50%; */
 }
 
 .half-one .container-cube .cube .front {
-  /* border-color: rgb(148, 0, 0); */
-  /* background-color: brown; */
-  /* opacity: .5; */
-  /* color: rgb(148, 1, 1); */
-  -webkit-transform: translateZ(300px);
-          transform: translateZ(300px);
+  -webkit-transform: translateZ(160px);
+          transform: translateZ(160px);
 }
 
 .half-one .container-cube .cube .back {
-  /* border-color: rgb(0, 0, 148); */
-  /* background-color: rgb(0, 0, 148); */
-  /* opacity: .5; */
-  /* color: rgb(0, 0, 148); */
-  -webkit-transform: rotateY(180deg) translateZ(300px);
-          transform: rotateY(180deg) translateZ(300px);
+  -webkit-transform: rotateY(180deg) translateZ(160px);
+          transform: rotateY(180deg) translateZ(160px);
 }
 
 .half-one .container-cube .cube .right {
-  /* border-color: rgb(0, 148, 7); */
-  /* background-color: rgb(0, 148, 7); */
-  /* opacity: .5; */
-  /* color: rgb(0, 148, 7); */
-  -webkit-transform: rotateY(90deg) translateZ(300px);
-          transform: rotateY(90deg) translateZ(300px);
+  -webkit-transform: rotateY(90deg) translateZ(160px);
+          transform: rotateY(90deg) translateZ(160px);
 }
 
 .half-one .container-cube .cube .left {
-  /* border-color: rgb(221, 233, 55); */
-  /* background-color: rgb(221, 233, 55); */
-  /* opacity: .5; */
-  /* color: rgb(221, 233, 55); */
-  -webkit-transform: rotateY(-90deg) translateZ(300px);
-          transform: rotateY(-90deg) translateZ(300px);
+  -webkit-transform: rotateY(-90deg) translateZ(160px);
+          transform: rotateY(-90deg) translateZ(160px);
 }
 
 .half-one .container-cube .cube .top {
-  /* border-color: rgb(148, 0, 131); */
-  /* background-color: rgb(148, 0, 131); */
-  /* opacity: .5; */
-  /* color: rgb(148, 0, 131); */
-  -webkit-transform: rotateX(90deg) translateZ(300px);
-          transform: rotateX(90deg) translateZ(300px);
+  -webkit-transform: rotateX(90deg) translateZ(160px);
+          transform: rotateX(90deg) translateZ(160px);
 }
 
 .half-one .container-cube .cube .bottom {
-  /* border-color: rgb(20, 2, 2); */
-  /* background-color: rgb(20, 2, 2); */
-  /* opacity: .5; */
-  /* color: rgb(255, 255, 255); */
-  -webkit-transform: rotateX(-90deg) translateZ(300px);
-          transform: rotateX(-90deg) translateZ(300px);
+  -webkit-transform: rotateX(-90deg) translateZ(160px);
+          transform: rotateX(-90deg) translateZ(160px);
 }
 
 @-webkit-keyframes cubeMove {
@@ -449,6 +425,11 @@ header .header-container .menu-list .list-items .activate {
   }
 }
 
+.half-one .cube-active {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 .preclouds-container {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#001e5a), color-stop(#0822b7), to(#1e528e));
   background-image: linear-gradient(#001e5a, #0822b7, #1e528e);
@@ -474,6 +455,8 @@ header .header-container .menu-list .list-items .activate {
   height: 100vh;
   -webkit-transform: translateX(100px);
           transform: translateX(100px);
+  -webkit-animation: precloudsMove 30s linear infinite;
+          animation: precloudsMove 30s linear infinite;
 }
 
 @-webkit-keyframes precloudsMove {
@@ -517,6 +500,7 @@ header .header-container .menu-list .list-items .activate {
   height: 70%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#1e528e), color-stop(#265889), to(#9da671));
   background-image: linear-gradient(#1e528e, #265889, #9da671);
+  overflow: hidden;
 }
 
 .about .sky .about-container {
@@ -524,13 +508,20 @@ header .header-container .menu-list .list-items .activate {
   width: 100%;
   margin-top: 25px;
   left: 50%;
-  top: 50%;
+  bottom: -50%;
   font-family: 'VT323';
   font-size: 40px;
   text-align: center;
   color: #c8ff00;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -250%);
+          transform: translate(-50%, -250%);
+  -webkit-transition: all 5s;
+  transition: all 5s;
+}
+
+.about .sky .about-magic {
+  -webkit-transform: translate(-50%, -150%);
+          transform: translate(-50%, -150%);
 }
 
 @media (max-width: 991.98px) {
@@ -598,6 +589,15 @@ header .header-container .menu-list .list-items .activate {
           perspective: 500px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+}
+
+.card-magic {
+  -webkit-transform: translateX(0vw);
+          transform: translateX(0vw);
 }
 
 .card-item {
@@ -646,40 +646,6 @@ header .header-container .menu-list .list-items .activate {
 .five {
   -webkit-animation: cardmove ease-in-out 3s;
           animation: cardmove ease-in-out 3s;
-}
-
-@-webkit-keyframes cardmove {
-  0% {
-    -webkit-transform: translateY(100vh);
-            transform: translateY(100vh);
-  }
-  50% {
-    -webkit-transform: translateY(-100vh);
-            transform: translateY(-100vh);
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-  100% {
-    -webkit-transform: rotateY(720deg);
-            transform: rotateY(720deg);
-  }
-}
-
-@keyframes cardmove {
-  0% {
-    -webkit-transform: translateY(100vh);
-            transform: translateY(100vh);
-  }
-  50% {
-    -webkit-transform: translateY(-100vh);
-            transform: translateY(-100vh);
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-  100% {
-    -webkit-transform: rotateY(720deg);
-            transform: rotateY(720deg);
-  }
 }
 
 .container-slides {
