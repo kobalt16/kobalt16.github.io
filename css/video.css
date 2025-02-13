@@ -1,0 +1,36 @@
+/* Стили для секции видео */
+.video-section {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.video-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    padding: 0 10px;
+}
+
+.video-item {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .video-item {
+        max-width: 100%;
+    }
+}

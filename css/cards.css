@@ -88,6 +88,22 @@
   .card-5 {
     background: radial-gradient(#316395, #0a141e);
   }
+
+  .card-6 {
+    background: radial-gradient(#513195, #0a141e);
+  }
+
+  .card-7 {
+    background: radial-gradient(#439531, #0a141e);
+  }
+
+  .card-8 {
+    background: radial-gradient(#953131, #0a141e);
+  }
+
+  .card-9 {
+    background: radial-gradient(#01070d, #0a141e);
+  }
   
   /* RESPONSIVE */
   
